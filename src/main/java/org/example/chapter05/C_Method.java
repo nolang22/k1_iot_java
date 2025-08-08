@@ -34,7 +34,7 @@ class MyMath {
     void noReturn() {
         System.out.println("해당 메서드는 반환값이 없습니다.");
 //        return;
-//        : 자바 컴파일러가 바노한차입의 void을 읽는 경우
+//        : 자바 컴파일러가 반환타입의 void을 읽는 경우
 //             , 해당 메서드의 마지막에 return;을 자동 추가
     }
 

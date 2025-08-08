@@ -21,25 +21,25 @@ public class D_Array {
 
 //        1. 배열 정렬 ( 오름차순):  Arrays.sort(정렬할 배열);
         Arrays.sort(numbers);
-        System.out.println(numbers[0]);
+        System.out.println(numbers[0]); // 1
 
 //        cf) .(마침표) 연산자: 해당 클래스 내부의 기능을 사용
 
 //        2. 배열 변환(배열 내용을 문자열로 출력):  Arrays.toString(변환할 배열);
-        System.out.println(numbers);
-        System.out.println(Arrays.toString(numbers));
+        System.out.println(numbers); // [I@28a418fc
+        System.out.println(Arrays.toString(numbers)); // [1, 2, 3, 4, 5]
 
 //        3. 배열 검색:  Arrays.binarySearch(배열, 검색 내용));
 //        - 배열 내에 존재 O: 존재하는 요소의 인덱스 번호를 반환
 //        - 배열 내에 존재 X: 해당 검색값의 음수를 반환 (음수 반환)
-        System.out.println(Arrays.binarySearch(numbers, 2));
-        System.out.println(Arrays.binarySearch(numbers, 4));
-        System.out.println(Arrays.binarySearch(numbers, 6));
+        System.out.println(Arrays.binarySearch(numbers, 2)); // 1
+        System.out.println(Arrays.binarySearch(numbers, 4)); // 3
+        System.out.println(Arrays.binarySearch(numbers, 6)); // -6
 
 //        cf) binarySearch()는 반드시 절렬된 배열 내에서 검색!
 //        : 해당 기능이 ' 이진 탐색 알고리즘'을 사용하기 때문!
 
-//        4. 배열 비교 Array,epuals(a배열, b배열);
+//        4. 배열 비교 Array,equals (a배열, b배열);
         int[] numbers2 = {1, 2, 4, 5, 6};
         System.out.println(Arrays.equals(numbers, numbers2)); // false
 
