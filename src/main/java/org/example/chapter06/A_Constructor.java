@@ -5,10 +5,10 @@ package org.example.chapter06;
 
     - 생성자 조건
         : 클래스명과 동일한 이름을 사용
-        : 리턴값이 겂는 메서드 형식(void 타입이 생략)
+        : 리턴값이 없는 메서드 형식(void 타입이 생략)
 
         '컴파일러가 제공하는 기본 생성자'
-        : 클래스에 생성자가 없으면 자동 생성되는 반 생성자
+        : 클래스에 생성자가 없으면 자동 생성되는 빈 생성자
             >> 매개변수 X,아무런 작업도 하지 않음(구현부 내의 코드가 없음)
  */
 class Example1 {
@@ -21,8 +21,8 @@ class Example1 {
 class Example2 {
     int value;
 
-    // 사용자 정의 생성자
-    // : 컴파일어가 자동으로 기본 생성자를 제거
+    //  사용자 정의 생성자
+    //      : 컴파일러가 자동으로 기본 생성자를 제거
     Example2(int value) {
         this.value = value;
     }
@@ -38,7 +38,7 @@ class Car {
     Car () {} // 기본 생성자 - 차를 생성한 뒤에 필드값 초기화
 
     // 사용자 정의 생성자
-      Car(String color, String gearType, int door) {
+    Car(String color, String gearType, int door) {
         this.color = color;
         this.gearType = gearType;
         this.door = door;
@@ -53,7 +53,6 @@ class Car {
         //      >> this(); - this 내부의 인자 형태를 컴파일러가 자동 분석하여 해당하는 생성자로 연결
         //      >> 생성자 이름으로 클래스명 대신 this를 사용
 
-//        door = 5;
         this(color, "auto", 4);
         // cf) 사용자 정의 생성자 내에서 타 생성자 호출 시
         //      , 반드시!!! 첫 줄에서만 사용 가능!!!
@@ -88,11 +87,14 @@ public class A_Constructor {
         car1.color = "black";
         car1.gearType = "auto";
         car1.door = 4;
+        System.out.println(car1.color + car1.gearType + car1.door); // blackauto4
 
-        Car car2 = new Car("white", "manual", 2); // 사용자 정의 생성자 호출
+        // 사용자 정의 생성자 호출
+        Car car2 = new Car("white", "manual", 2);
+        System.out.println(car2.color + car2.gearType + car2.door); // whitemanual2
 
-        Car car3 = new Car("red");
-        System.out.println(car3.color + car3.door + car3.gearType);
+        Car car3 = new Car("yellow");
+        System.out.println(car3.color + car3.gearType + car3.door); // yellowauto6
 
         // cf) 인스턴스 생성
         //      : 생성자가 인스턴스 생성 X

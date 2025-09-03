@@ -68,16 +68,16 @@ public class C_Method {
         MyMath myMath = new MyMath();
 
 
-        System.out.println(myMath.add(10,20));
-        System.out.println(myMath.subtract(10,20));
-        System.out.println(myMath.multiply(10,20));
+        System.out.println(myMath.add(10,20)); // 30
+        System.out.println(myMath.subtract(10,20)); // -1
+        System.out.println(myMath.multiply(10,20)); // 200
         System.out.println(myMath.divide(10, 20)); // 자기 자신보다 큰 수로 나누면 '0' 반환
 
-         System.out.println(myMath.divide(10,0));
+         System.out.println(myMath.divide(10,0)); // 정수 0으로 나눌 수 없습니다.
         // ArithmeticException: / by zero
         // >> 자바에서는 수를 0으로 나누면 예외가 발생
 
-        System.out.println(myMath.doubleDivide(1, 0.0));
+        System.out.println(myMath.doubleDivide(1, 0.0)); // Infinity
 
         // cf) 인자값의 매개변수의 관계
         // : 자바는 값에 의한 호출 방식을 사용

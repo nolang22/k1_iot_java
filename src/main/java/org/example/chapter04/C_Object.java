@@ -1,30 +1,30 @@
 package org.example.chapter04;
 
 /*
-                    === 클래스 구조 ===
-                1. 필드(field): 데이터를 표현 하는 속성
-                2. 메서드(Method): 데이터의 동작
-                3. 생성자(Constructor): 데이터를 생성하는 역할
+    === 클래스 구조 ===
+    1. 필드(field): 데이터를 표현 하는 속성
+    2. 메서드(Method): 데이터의 동작
+    3. 생성자(Constructor): 데이터를 생성하는 역할
  */
 class Car {
     // 클래스의 속성(필드)
     String model; //  모델명
     int year; // 제조 연도
 
-    // 클래스의 행동(메서드)
-    // : 클래스 내부에서 정의된 '함수', 객체의 행동을 표현
-    // = 클래스의 속성(필드)을 사용하여 특정 작업을 수행
-    //           || 해당 값을 변경 또는 반환 가능
+    //  클래스의 행동(메서드)
+    //  : 클래스 내부에서 정의된 '함수', 객체의 행동을 표현
+    //  = 클래스의 속성(필드)을 사용하여 특정 작업을 수행
+    //      || 해당 값을 변경 또는 반환 가능
 
     /*
-        == 메서드 구조
+        == 메서드 구조 ==
         반환타입 메서드명(매개변수...) {
             메서드의 동작을 정의
         }
      */
     void displayInfo() { //lowerCameCase (변수명과 동일)
          // cf) void
-         //     : 해당 메서드( 함수, 행동)의 반환하는 결과 X
+         //     : 해당 메서드(함수, 행동)의 반환하는 결과 X
          //     : 변환(return)이 존재하지 않을 경우 메서드명 앞에 반드시 작성!
          System.out.println("Model: " + model + ", Year: " + year);
     }
@@ -67,7 +67,7 @@ public class C_Object {
         // 클래스타입 변수명 = new 생성자호출(필요한 데이터...);
         Car myCar = new Car("volvo cx60", 2025);
 
-        System.out.println(myCar);
+        System.out.println(myCar); // org.example.chapter04.Car@28a418fc
 
         // == 객체 사용 == //
         // .연산자를 사용 - 객체 내부의 필드와 메서드를 사용
@@ -75,13 +75,13 @@ public class C_Object {
         // 1. 필드 접근
         // : 객체명.필드명;
         // cf) A.B: A안에 B
-        System.out.println(myCar.model);
-        System.out.println(myCar.year);
+        System.out.println(myCar.model); // volvo cx60
+        System.out.println(myCar.year); // 2025
 
         // 2. 메서드 호출
         // : 객체명.메서드명();
         // cf) A.B(): A안에 B를 실행
-        myCar.displayInfo();
+        myCar.displayInfo(); // Model: volvo cx60, Year: 2025
 
         // cf) 객체 생성 구문
         // '클래스명' 객체명 = new 클래스명(생성자 매개변수값 전달);

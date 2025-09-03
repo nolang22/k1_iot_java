@@ -10,7 +10,7 @@ class Book {
     // 클래스 내부 동작(행동, 메서드)
     void dispalyInfo() {
         System.out.println(title + " " + publisher);
-        // void: 반환값이 없는 경우 - return 생각 || return;
+        // void: 반환값이 없는 경우 - return 생략 || return;
 
         // cf) 반환값이 있는 경우: return 반환값;
 
@@ -34,8 +34,6 @@ class Book {
         this.publisher = publisher;
         this.pageNumber = pageNumber;
     }
-
-
 }
 
 public class D_Object {
@@ -45,21 +43,21 @@ public class D_Object {
         System.out.println(myBook1.publisher);  //null
         System.out.println(myBook1.pageNumber); // 0
 
-        Book myBook2 = new Book("백설공주", "코리아출판사", 50);
+        Book myBook2 = new Book("백설왕자", "코리아출판사", 50);
         Book myBook3 = new Book("신데렐라", "에이원출판사", 100);
 
-        System.out.println(myBook2.title);
-        System.out.println(myBook3.title);
+        System.out.println(myBook2.title); // 백설왕자
+        System.out.println(myBook3.title); // 신데렐라
 
-        myBook1.dispalyInfo();
-        myBook2.dispalyInfo();
-        myBook3.dispalyInfo();
+        myBook1.dispalyInfo(); // null null
+        myBook2.dispalyInfo(); // 백설왕자 코리아출판사
+        myBook3.dispalyInfo(); // 신데렐라 에이원출판사
 
-        myBook1.title = "개구리왕자";
+        myBook1.title = "개구리공주";
         myBook1.publisher = "개굴출판사";
-        myBook1.dispalyInfo();
+        myBook1.dispalyInfo(); // 개구리공주 개굴출판사
 
         myBook2.title = "콩쥐팥쥐";
-        myBook2.dispalyInfo();
+        myBook2.dispalyInfo(); // 콩쥐팥쥐 코리아출판사
     }
 }

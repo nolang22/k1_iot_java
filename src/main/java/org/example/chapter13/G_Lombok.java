@@ -29,44 +29,45 @@ package org.example.chapter13;
 
     1) build.gradle 파일에 롬복추가
 
-   +) maven repository
-   : Java 프로젝트에 피료한 라이브러리(외부코드)들을 쉽게 다운로드하고 관리할  수있도록 도와주는저장소
-   - 주로 Maven 빌드도구와 함께 사용되지만
-        , Gradle 에서도 사용
+        +) maven repository
+        : Java 프로젝트에 피료한 라이브러리(외부코드)들을 쉽게 다운로드하고 관리할  수있도록 도와주는저장소
+        - 주로 Maven 빌드도구와 함께 사용되지만
+            , Gradle 에서도 사용
 
-   2) gradle 리로드 (refresh)
+        2) gradle 리로드 (refresh)
 
-   3) 설정(빌드, 실행, 배포 > 컴파일러 > 어노테이션 처리 활성화)
+        3) 설정(빌드, 실행, 배포 > 컴파일러 > 어노테이션 처리 활성화)
 
     == 롬복(Lombok) 라이브러리 어노테이션 종류 == //
+
     1. @Getter/@Setter
-    : 필드에 대한 getter와 setter 메서드를 자동 생성
+        : 필드에 대한 getter와 setter 메서드를 자동 생성
 
     2. @ToString
-    : 클래스의 toString() 메서드를 자동 구현
-    - 객체 출력 시 지정된 형식으로 출력
-    - 클래스명(필드명1=필드값1, 필드명2=필드값2, ...)
+        : 클래스의 toString() 메서드를 자동 구현
+        - 객체 출력 시 지정된 형식으로 출력
+        - 클래스명(필드명1=필드값1, 필드명2=필드값2, ...)
 
     3. 생성자 어노테이션
-    cf) 매개변수 parameter(params), 인자(인수) argument(args)
+         cf) 매개변수 parameter(params), 인자(인수) argument(args)
 
-    1) @NoArgsConstructor: 인자가 없는 생성자
-    2) @AllArgsConstructor: 모든 필드값을 인자로 가지는 생성자
-    3) @RequiredArgsConstructor: final 또는 @NotNull 어노테이션이 붙은 필드를 인자로 가지는 생성자
+        1) @NoArgsConstructor: 인자가 없는 생성자
+        2) @AllArgsConstructor: 모든 필드값을 인자로 가지는 생성자
+        3) @RequiredArgsConstructor: final 또는 @NotNull 어노테이션이 붙은 필드를 인자로 가지는 생성자
 
     4. Data 어노테이션
-    @Getter, @Setter, @ToString, @RequiredArgsConstructor, @EqualsAndHashCode 어노테이션을
-        한 번에 적용하는 어노테이션
+        @Getter, @Setter, @ToString, @RequiredArgsConstructor, @EqualsAndHashCode 어노테이션을
+            한 번에 적용하는 어노테이션
 
     cf)  @EqualsAndHashCode
-    : 두 객체의 내용이 같은지(동등성) 비교 & 두 객체가 같은 객체인지(동일성) 비교 연산자
-    >> boolean 값 반환
+        : 두 객체의 내용이 같은지(동등성) 비교 & 두 객체가 같은 객체인지(동일성) 비교 연산자
+        >> boolean 값 반환
 
     5. @Builder 어노테이션
-    : 복잡한 객체 생성 시 사용하는 빌더 패턴을 자동으로 구현
-    - 필드값ㅇ르 모두 메서드 체이닝으로 가져옴 (필수값 또한 메서드 체이닝으로 구성)
-    - 메서드 체이닝 이름은 필드명
-    >> 필수값을 체이닝에서 누락 시 오휴
+        : 복잡한 객체 생성 시 사용하는 빌더 패턴을 자동으로 구현
+        - 필드값ㅇ르 모두 메서드 체이닝으로 가져옴 (필수값 또한 메서드 체이닝으로 구성)
+        - 메서드 체이닝 이름은 필드명
+        >> 필수값을 체이닝에서 누락 시 오휴
  */
 
 import lombok.*;

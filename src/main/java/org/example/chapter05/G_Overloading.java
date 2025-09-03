@@ -11,18 +11,14 @@ class Restaurant {
     // 메뉴 이름 * 특별 요청 사항 (String specialRequests)
     // 메뉴 이름 * 수량 제공 * 특별 요청 사항
 
-    void PlaceOrder(String dish) {
-        System.out.println(dish);
-    }
-    void PlaceOrder(String dish, int quantity) {
-        System.out.println(dish + " * " + quantity);
-    }
-    void PlaceOrder(String dish, String specialRequests) {
-        System.out.println(dish + " * " + specialRequests);
-    }
+    void PlaceOrder(String dish) { System.out.println(dish); }
+
+    void PlaceOrder(String dish, int quantity) { System.out.println(dish + " * " + quantity); }
+
+    void PlaceOrder(String dish, String specialRequests) { System.out.println(dish + " * " + specialRequests); }
+
     void PlaceOrder(String dish,int quantity, String specialRequests) {
-        System.out.println(dish+ " * " + quantity+ " * " + specialRequests);
-    }
+        System.out.println(dish+ " * " + quantity+ " * " + specialRequests); }
 }
 
 public class G_Overloading {
@@ -31,9 +27,10 @@ public class G_Overloading {
 
         // 자바의 컴파일러가 인자의 형태를 확인하고
         //       , 자동으로 해당 타입과 순서의 메서드로 인식!
-        restaurant.PlaceOrder("햄버거");
-        restaurant.PlaceOrder("피자", 2);
-        restaurant.PlaceOrder("파스타", "소스 많이 주세요");
+        restaurant.PlaceOrder("햄버거"); // 햄버거
+        restaurant.PlaceOrder("피자", 2); // 피자 * 2
+        restaurant.PlaceOrder("파스타", "소스 많이 주세요"); // 파스타 * 소스 많이 주세요
         restaurant.PlaceOrder("샐러드", 3, "땅콩 빼고 주세요");
+        // 샐러드 * 3 * 땅콩 빼고 주세요
     }
 }

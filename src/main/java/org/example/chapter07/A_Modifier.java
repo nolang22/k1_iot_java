@@ -21,7 +21,7 @@ import org.example.otherPackage.PublicClass;
     : public, (default), protected, private
     - 생략 시 default 값 지정
 
-    cf) default class  DefaultClass {} - default 키워드를 직접 명시 X
+    cf) default class DefaultClass {} - default 키워드를 직접 명시 X
 
     cf) 클래스 자체에 접근 제어자 사용 X
         : 중첩 클래스가 아닌 경우 명시적인 접근제어자 사용 불가
@@ -29,8 +29,8 @@ import org.example.otherPackage.PublicClass;
 
     protected class  ProtectedClass {} - 클래스 자체에 사용 불가! (중첩클래스만 가능)
  */
-class  Modifier {}
 
+class  Modifier {}
 
 /*  2. 접근 제어자 범위
     public > protected > (default) > private
@@ -69,6 +69,7 @@ class ProtectedClass extends OtherClass {
         otherMethod();
     }
 }
+
 // 4) public
 // : 클래스나 패키지 위치와 상관없이 접근 가능
 
@@ -76,7 +77,7 @@ public class A_Modifier {
     public static void main(String[] args) {
 //        PrivateClass 외부에서  private 필드에 접근
         PrivateClass privateClass = new PrivateClass();
-//        privateClass.myField;  >> 'myField'이(가) 'PrivateClass'에서 private 액세스를 가집니다
+//        privateClass.myField;  >> 'myField' 이(가) 'PrivateClass' 에서 private 액세스를 가집니다
 //        privateClass.myMethod();
 //        : 접근제어자는 가시성을 나타냄
 //        - private는 해당 클래스 내부에서만 접근 가능
@@ -90,12 +91,12 @@ public class A_Modifier {
         ProtectedClass protectedClass = new ProtectedClass();
 //        다른 패키지의 필드(protected)
 //        다른 패키지의 메서드(protected)
+
 //        protectedClass.myField; - A_Modifier 클래스에서 상속받지 않았기 때문에 접근 불가!
 
+        System.out.println("-----------------------");
         PublicClass publicClass = new PublicClass();
-         System.out.println(publicClass.publicField);
-         publicClass.publicMethod();
-//        어디서든지 접근 가능한 필드
-//        어디서든지 접근 가능한 메서드
+         System.out.println(publicClass.publicField); // 어디서든지 접근 가능한 필드
+         publicClass.publicMethod(); // 어디서든지 접근 가능한 메서드
     }
 }
