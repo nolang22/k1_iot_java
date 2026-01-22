@@ -25,7 +25,6 @@ package org.example.chapter11;
 
  */
 
-
 //  1) 잘못된 설계 예시 - 하나의 클래스가 여러 개의 책임을 가짐
 class SchoolHelper {
     void cleanClassroom() {
@@ -131,13 +130,6 @@ class InjuredSoccerPlayer extends StudentAbstract {
         System.out.println("다쳐서 축구를 할 수 없습니다. 재활 훈련을 합니다. ");
     }
 }
-
-
-
-
-
-
-
 
 public class A_OOP {
 

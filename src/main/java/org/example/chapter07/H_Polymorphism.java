@@ -63,12 +63,15 @@ public class H_Polymorphism {
             업캐스팅 된 객체를 다운 캐스팅할 경우 instanceof 클래스타입의 객체가 맞는지 확인 후 캐스팅 */
         if (subway instanceof Vehicle) {
             // subway 객체가 Vehicle 인스턴스 || Vehicle을 상속받은 인스턴스 일 경우
-            subway.depart();
+
+            subway.depart(); // 문이 닫힙니다. 열차가 출발합니다.
         }
         if (bus instanceof Vehicle) {
-            bus.depart();
+
+            bus.depart(); // 버스가 출발합니다. 자리에 앉아주세요.
         }
-        if (vehicle instanceof Bus) {
+        if (vehicle instanceof Bus) { // 운송수단은 버스가 아닙니다
+
             System.out.println("운송수단은 버스입니다.");
         } else {
             System.out.println("운송수단은 버스가 아닙니다");

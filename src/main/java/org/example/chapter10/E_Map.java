@@ -4,7 +4,7 @@ package org.example.chapter10;
     : 키(key)와 값(value)의 쌍으로 요소를 저장하는 데이터 구조
     - 키는 고유한 데이터를 가짐 (중복 키 허용 X)
     - 동일한 키에 서로 다른 값 전달 시 시존 값이 새로운 값으로 덮어씌워짐
-    EX) name: "이승승, name: "이도도" (불가! - name: "이도도"만 존재)
+    EX) name: "파랑팔랑, name: "보라도도" (불가! - name: "보라도도"만 존재)
 
     cf) 서로 다른 키에 동일한 값은 가능
     EX) name: "개구리", nickname: "개구리"
@@ -42,31 +42,31 @@ public class E_Map {
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ추가ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 추가 put
-        studentAges.put("홍기기", 20); // put(키, 값): 키와 값을 Map 추가
-        studentAges.put("김지지", 25);
-        studentAges.put("김동동", 30);
+        studentAges.put("빨간포션", 20); // put(키, 값): 키와 값을 Map 추가
+        studentAges.put("샛노랑", 25);
+        studentAges.put("초록잎", 30);
 
         System.out.println(studentAges);
-        // {김동동=30, 홍기기=20, 김지지=25}
+        // {초록잎=30, 빨간포션=20, 샛노랑=25}
         // 중괄호 내에 키=값의 쌍이 콤마로 구분되어 나열
         // >> 삽입 순서 보장 X
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ읽기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 읽기(반환) get
-        System.out.println(studentAges.get("홍기기")); // 저정된 키의 값을 반환 - 20
+        System.out.println(studentAges.get("빨간포션")); // 저정된 키의 값을 반환 - 20
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ삭제ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 삭제 remove
-        studentAges.remove("김동동"); // 지정된 키의 값을 삭제 후 반환
-        System.out.println(studentAges); // {홍기기=20, 김지지=25}
+        studentAges.remove("초록잎"); // 지정된 키의 값을 삭제 후 반환
+        System.out.println(studentAges); // {빨간포션=20, 샛노랑=25}
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡ contains ㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 포함 여부 확인
         // 리스트.contains(요소값);
-        System.out.println(studentAges.containsKey("이승승")); // false
+        System.out.println(studentAges.containsKey("파랑팔랑")); // false
         System.out.println(studentAges.containsKey(30)); // false
 
-        System.out.println(studentAges.containsKey("김지지")); // true
+        System.out.println(studentAges.containsKey("샛노랑")); // true
         System.out.println(studentAges.containsValue(20)); // true
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ크기ㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
@@ -75,7 +75,7 @@ public class E_Map {
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ키 값 보고싶을때ㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // keySet(): Map의 키들을 Set으로 반환
-        System.out.println(studentAges.keySet()); // [홍기기, 김지지]
+        System.out.println(studentAges.keySet()); // [빨간포션, 샛노랑]
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ벨류 값 보고싶을때ㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // values(): Map의 값들
@@ -93,14 +93,7 @@ public class E_Map {
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ모두 읽기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
 
-
-
-
-
-
-
-
         // entrySet(): Map의 키와 값을 Set으로 변환
-        System.out.println(studentAges.entrySet()); // [홍기기=20, 김지지=25]
+        System.out.println(studentAges.entrySet()); // [빨간포션=20, 샛노랑=25]
     }
 }

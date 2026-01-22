@@ -44,7 +44,7 @@ public class B_List {
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ추가ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 추가 add
         arrayList.add("Java");
-        arrayList.add(0, "Python"); // [Python, Java, JavScript]
+        arrayList.add(0, "Python");
         arrayList.add("JavScript");
 
         linkedList.add("Apple");
@@ -58,12 +58,12 @@ public class B_List {
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ읽기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 읽기(반환) get
         String firstElement = arrayList.get(0); // arrayList의 0번째 데이터 읽기
-        System.out.println(firstElement);
+        System.out.println(firstElement); // Python
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ수정ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 수정 set
         arrayList.set(2, "TypeScript");
-        System.out.println(arrayList);
+        System.out.println(arrayList); // [Python, Java, TypeScript]
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ삭제ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 삭제 remove
@@ -86,8 +86,8 @@ public class B_List {
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡ contains ㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 포함 여부 확인
         // 리스트.contains(요소값);
-        System.out.println(linkedList.contains("Orange"));
-        System.out.println(linkedList.contains("Strawberry"));
+        System.out.println(linkedList.contains("Orange")); // true
+        System.out.println(linkedList.contains("Strawberry")); // false
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         //  == ArrayList VS LinkedList 성능 비교 == //
@@ -98,7 +98,7 @@ public class B_List {
 
         long startTime = System.nanoTime();
         // 1초 = 1,000,000,000 나노초 (10억 나노초)
-        System.out.println(startTime);
+        System.out.println(startTime); // 22828880730400
 
         for (int i = 0; i < 222222; i++) {
             arrayListTest.add(0, i);
@@ -107,6 +107,7 @@ public class B_List {
         long endTime = System.nanoTime();
 
         System.out.println("ArrayList 삽입 시간: " + (endTime - startTime) + "ns");
+        // ArrayList 삽입 시간: 2060928900ns
 
 
         // ===== //
@@ -119,7 +120,7 @@ public class B_List {
         }
         endTime = System.nanoTime();
         System.out.println("LinkedList 삽입 시간: " + (endTime - startTime) + "ns");
-
+        // LinkedList 삽입 시간: 7335700ns
     }
 }
 

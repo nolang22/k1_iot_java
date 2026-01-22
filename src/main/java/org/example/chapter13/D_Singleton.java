@@ -1,7 +1,5 @@
 package org.example.chapter13;
 
-import org.w3c.dom.ls.LSOutput;
-
 /*  === 싱글톤(Singleton) 패턴 === //
     : 소프트웨어 설계 패턴 중 하나
     - 클래스의 인스턴스가 하나만 생성되도록 보장
@@ -11,7 +9,6 @@ import org.w3c.dom.ls.LSOutput;
     - 클래스의 인스턴스가 단 하나만 존재
     - 인스턴스에 대해 전역 접근을 제공
     - 주로 설정 정보 관리 객체, 공유 자원 관리 객체, 로그 객체 등에서 사용
-
 
     2) 사용 목적
     - 객체의 유일성을 보장
@@ -25,7 +22,7 @@ import org.w3c.dom.ls.LSOutput;
 
     -단점
         : 결합도가 증가 - 여러 클래스가 같은 인스턴스 공유 시,
-                        하나가 변뎡될 때 다른 곳에 영향을 미칠 수 있음
+                        하나가 변경될 때 다른 곳에 영향을 미칠 수 있음
         : 테스트에 어려움 - 전역 상태를 사용하는 특성
 
     4) 구현 방법   */
@@ -89,21 +86,21 @@ class Example {
 }
 
 
-public class D_Singleton {
+public class  D_Singleton {
     public static void main(String[] args) {
         // instance == null (true)
         // : 새로운 객체 생성
-         SchoolPrincipal principal1 = SchoolPrincipal.getInstance();
+         SchoolPrincipal principal1 = SchoolPrincipal.getInstance(); // 교장 센세 객체 생성!
 
         // 기본의 instance 주소를 반환
         SchoolPrincipal principal2 = SchoolPrincipal.getInstance();
         SchoolPrincipal principal3 = SchoolPrincipal.getInstance();
         SchoolPrincipal principal4 = SchoolPrincipal.getInstance();
 
-        System.out.println(principal1);
-        System.out.println(principal2);
-        System.out.println(principal3);
-        System.out.println(principal4);
+        System.out.println(principal1); // org.example.chapter13.SchoolPrincipal@2f92e0f4
+        System.out.println(principal2); // org.example.chapter13.SchoolPrincipal@2f92e0f4
+        System.out.println(principal3); // org.example.chapter13.SchoolPrincipal@2f92e0f4
+        System.out.println(principal4); // org.example.chapter13.SchoolPrincipal@2f92e0f4
 
         System.out.println();
 
@@ -112,13 +109,13 @@ public class D_Singleton {
         Example example3 = new Example();
         Example example4 = new Example();
 
-        System.out.println(example1);
-        System.out.println(example2);
-        System.out.println(example3);
-        System.out.println(example4);
+        System.out.println(example1); // org.example.chapter13.Example@5305068a
+        System.out.println(example2); // org.example.chapter13.Example@1f32e575
+        System.out.println(example3); // org.example.chapter13.Example@279f2327
+        System.out.println(example4); // org.example.chapter13.Example@2ff4acd0
 
         System.out.println(principal1 == principal4); // true
 
-        principal1.announce();
+        principal1.announce(); // 공부 열심히하고 운동 열심히하고 일찍 자고 일찍 일어나세요~~~~~
     }
 }

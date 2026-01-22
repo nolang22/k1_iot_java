@@ -55,7 +55,7 @@ public class H_Stream {
         names.add("최광광");
         names.add("손태태 :)");
         names.add("박진진");
-        names.add("박진진");
+        names.add("노랑랑");
 
         System.out.println(names);
         System.out.println();

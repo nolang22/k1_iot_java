@@ -78,14 +78,13 @@ public class JavaLang {
         // : 무작위 난수를 생성
         // : 0.0 이상 0.1 미만의 난수를 생성
 
-
         System.out.println("== String ==");
         String message = "Merry Christmas!";
 
-        System.out.println(message.length()); // 문자열의 길이 (공백, 기호까지도 포함)
+        System.out.println(message.length()); // 16  문자열의 길이 (공백, 기호까지도 포함)
 
         boolean isEquals = message.equals("Merry Christmas");
-        System.out.println(isEquals);
+        System.out.println(isEquals); // false
 
         // subString(int start, int end);
         // : 시작 인덱스(포함)부터 끝 인덱스(미보함)미만 까지의 부분 문자열을 반환
@@ -98,12 +97,11 @@ public class JavaLang {
         // indexOf(String str)
         // - 문자열에서 특정 문자열의 첫 번째 위치를 반환
         int index = message.indexOf("Christmas");
-        System.out.println(index);
+        System.out.println(index); // 6
 
         // charAt(int index)
         // - 특정 인덱스의 문자를 반환
-        char c = message.charAt(6);
-        System.out.println(c);
-
+        char c = message.charAt(7);
+        System.out.println(c); // h
     }
 }

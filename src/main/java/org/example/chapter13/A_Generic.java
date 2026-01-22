@@ -62,6 +62,7 @@ public class A_Generic {
         // == 제네릭 사용 방법 (실질적인 타입 전달) == //
         // 제네릭 메서드 사용
         // <제네릭타입>메서드명();
+
         Pair.<String>print("안녕"); // 안녕
 
         // Pair.<Integer>print("안녕");
@@ -71,7 +72,8 @@ public class A_Generic {
         Pair.<Integer>print(100); // 100
 
         // cf) 자바의 제네릭은 타입 명시를 생략해도 자동으로 타입을 추론
-        Pair.print("Hellow"); // T에 String 추론
+
+        Pair.print("Hello"); // T에 String 추론
         Pair.print(200); // T에 Integer 추론
 
         // == 제네릭 클래스 사용 == //

@@ -49,34 +49,34 @@ public class C_ListPractice {
     public static void main(String[] args) {
         EventManagement eventManagement = new EventManagement();
 
-        eventManagement.addParticipant("이승승");
-        eventManagement.addParticipant("조승승");
-        eventManagement.addParticipant("진상상");
-        eventManagement.addParticipant("윤대대");
-        eventManagement.addParticipant("박성성");
+        eventManagement.addParticipant("빨간체리");
+        eventManagement.addParticipant("샛노랑");
+        eventManagement.addParticipant("초록메론");
+        eventManagement.addParticipant("파란파파야");
+        eventManagement.addParticipant("보라버섯");
 
-        eventManagement.addToWaitingQueue("김소소");
-        eventManagement.addToWaitingQueue("윤안안");
-        eventManagement.addToWaitingQueue("이은은");
-        eventManagement.addToWaitingQueue("최현현");
+        eventManagement.addToWaitingQueue("핑크용과");
+        eventManagement.addToWaitingQueue("베이지베지밀");
+        eventManagement.addToWaitingQueue("검정먹물");
+        eventManagement.addToWaitingQueue("하늘솜사탕");
 
-        System.out.println(eventManagement.participantList); // [이승승, 조승승, 진상상, 윤대대, 박성성]
-        System.out.println(eventManagement.waitingQueue); // [김소소, 윤안안, 이은은, 최현현]
+        System.out.println(eventManagement.participantList); // [빨간체리, 샛노랑, 초록메론, 파란파파야, 보라버섯]
+        System.out.println(eventManagement.waitingQueue); // [핑크용과, 베이지베지밀, 검정먹물, 하늘솜사탕]
 
-        eventManagement.addToWaitingQueue("이혜혜");
-        eventManagement.addToWaitingQueue("김준준");
+        eventManagement.addToWaitingQueue("샛노랑");
+        eventManagement.addToWaitingQueue("싫은주황");
 
-        System.out.println(eventManagement.waitingQueue); // [김소소, 윤안안, 이은은, 최현현, 이혜혜, 김준준]
+        System.out.println(eventManagement.waitingQueue); // [핑크용과, 베이지베지밀, 검정먹물, 하늘솜사탕, 샛노랑, 싫은주황]
 
-        eventManagement.leaveParticipant("이승승");
-        eventManagement.leaveParticipant("조승승");
-        eventManagement.leaveParticipant("윤대대");
+        eventManagement.leaveParticipant("빨간체리");
+        eventManagement.leaveParticipant("샛노랑");
+        eventManagement.leaveParticipant("파란파파야");
 
-        System.out.println(eventManagement.participantList); // [이승승, 조승승, 진상상, 윤대대, 박성성, 김소소, 윤안안, 이은은]
-        System.out.println(eventManagement.waitingQueue); // [최현현, 이혜혜, 김준준]
+        System.out.println(eventManagement.participantList); // [빨간체리, 샛노랑, 초록메론, 파란파파야, 보라버섯, 핑크용과, 베이지베지밀, 검정먹물]
+        System.out.println(eventManagement.waitingQueue); // [하늘솜사탕, 샛노랑, 싫은주황]
 
-        System.out.println(eventManagement.checkParticipant("조승승")); // true
-        System.out.println(eventManagement.checkParticipant("최현현")); // false
+        System.out.println(eventManagement.checkParticipant("샛노랑")); // true
+        System.out.println(eventManagement.checkParticipant("하늘솜사탕")); // false
 
     }
 }

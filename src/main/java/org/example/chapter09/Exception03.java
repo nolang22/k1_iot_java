@@ -12,7 +12,6 @@ package org.example.chapter09;
     - 인자로 전달하는 문자열은
     - 예외변수(e).getMessage() 메서드를 활용하여 catch 블록에서 출력 가능
 
-
     2. throws
     :메서드 선언부에 위치, 호출자에게 예외 처리를 위임
     - 체크(컴파일) 예외: 필수 명시 / 언체크(런타임) 예외: 선택 명시
@@ -77,7 +76,7 @@ public class Exception03 {
 
             System.out.println("예외 발생 시 실행 X / 예외 할생하지 않으면 실행 O");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage()); // 나이는 음수가 될 수 없습니다.
         }
         System.out.println("기타 실행 상황");
 
@@ -93,7 +92,7 @@ public class Exception03 {
             login("qwe123", "qwe123");
             System.out.println("출력3");
         } catch (InvalidUserException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage()); // 사용자 이름이 잘못되었습니다.
         }
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
@@ -107,7 +106,7 @@ public class Exception03 {
         } catch (ArithmeticException e) {
             System.out.println("2번: " + e.getMessage());
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("기타: " + e.getMessage());
+            System.out.println("기타: " + e.getMessage()); // 기타: 그 외에는 - 배열 인텍스 초과 예외
         }
     }
 }

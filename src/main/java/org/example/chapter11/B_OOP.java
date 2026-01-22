@@ -10,6 +10,7 @@ import java.sql.SQLOutput;
     - 클래스는 자신이 사용하지 않는 메서드에 의존하지 않아야 함.
 
  */
+
 //  1) 잘못된 설계 예시 - 필요하지 않은 행위를 강제로 구현!
 interface Worker {
     void work();

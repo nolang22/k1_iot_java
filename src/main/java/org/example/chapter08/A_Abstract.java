@@ -9,7 +9,7 @@ package org.example.chapter08;
 
     2. 추상 클래스 특징
     1) 자체로 인스턴스 생성 X
-    2) 반드시! 하나 이상의 추상 메서드를 포한
+    2) 반드시! 하나 이상의 추상 메서드를 포함
 
     3. 추상 클래스 구현 방법
     : 클래스 선언 앞에 'abstract' 키워드 사용
@@ -17,14 +17,14 @@ package org.example.chapter08;
 
     4. 사용 목적
     : 확장성 제공을 위해 사용
-            -자식 클래스가 공통된 기능을 공유 + 고유 기능을 구현하도록 강제!
+        - 자식 클래스가 공통된 기능을 공유 + 고유 기능을 구현하도록 강제!
 
     cf) 다중 상속 불가능! - 하나의 extends만 가능
 
     5. 추상 메서드
     : 메서드의 선언부만 존재 0, 구현부가 없는 메서드
     - 자식 클래스에서 해당 메서드를 반드시! 구현하도록 강제하는 역할!
-    -abstract 키워드 사용 + 구현부 {} 대신 세미콜론;을 사용하여 선언 마침
+    - abstract 키워드 사용 + 구현부 {} 대신 세미콜론;을 사용하여 선언 마침
 
     cf) 메서드 구성: 선언부(시그니처) + 구현부 {}
     [접근제어자] 반환타입 메서드명(매개변수 나열...) { 구현부 - 메서드의 기능 동작 }
@@ -62,9 +62,9 @@ abstract class Tiger {
     abstract void stripe();
 }
 
-//class Liger extends Lion extends Tiger { - 다중 상속 불가
+//  class Liger extends Lion extends Tiger { - 다중 상속 불가
 //
-//}
+//  }
 
 // 추상 클래스 예시
 abstract class Animal {
@@ -74,8 +74,6 @@ abstract class Animal {
         System.out.println("동물은 먹이를 먹습니다. ");
     }
 
-    // 인터페이스 클래스와 다르게
-    // 추상화 클래스에는 default, static이 들어가지않아도 된다.
     static void staticMethod() {
         System.out.println("정적 메서드입니다.");
     }
@@ -99,31 +97,31 @@ class Dog extends Animal {
 class Cat extends Animal {
     @Override
     void makeSound() {
-        System.out.println("야옹!");
+        System.out.println("야옹오호호홍홍!");
     }
 }
 
 public class A_Abstract {
     public static void main(String[] args) {
-//        Human human = new Human(); - 'Human'은 abstract이며, 인스턴스화할 수 없습니다
+//        Human human = new Human(); - 'Human' 은 abstract 이며, 인스턴스화할 수 없습니다
         // >> 추상 클래스는 직접적인 인스턴스화가 불가능!
 
         Dog dog = new Dog();
         Cat cat = new Cat();
 
-        Animal.staticMethod();
+        Animal.staticMethod(); // 정적 메서드입니다.
 
-        dog.makeSound();
-        dog.eat();
-        dog.bark();
-        cat.makeSound();
-        cat.eat();
+        dog.makeSound();                                    // 멍멍!
+        dog.eat();                                          // 강아지는 개껌을 먹습니다
+        dog.bark();                                         // 멍멍왈왈멍오라홍ㄻ아렁러
+        cat.makeSound();                                    // 야옹오호호홍홍!
+        cat.eat();                                          // 동물은 먹이를 먹습니다.
 
         // cf) 추상 클래스 또한 클래스 타입으로 활용 가능
         //      >> 단, 자식만이 가진 멤버(필드 & 메서드)에 접근 불가
         Animal animalDog = new Dog();
-        animalDog.makeSound();
-        animalDog.eat();
+        animalDog.makeSound();                              // 멍멍!
+        animalDog.eat();                                    // 강아지는 개껌을 먹습니다
 //        animalDog.bark();
     }
 }

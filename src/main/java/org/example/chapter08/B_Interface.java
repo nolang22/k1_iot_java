@@ -13,7 +13,7 @@ package org.example.chapter08;
             : 실제 구현은 인터페이스를 구현한 클래스에서 담당
 
 
-    cf) 필수 키워드 생략 가능 ( 부분 생략도 가능)
+    cf) 필수 키워드 생략 가능 (부분 생략도 가능)
 
     2. 인터페이스 특징
     : 다중 구현을 지원 - 한 클래스에서 여러 인터페이스를 동시에 구현 가능
@@ -103,19 +103,18 @@ public class B_Interface {
 
         Card card = new Card("7", "HEART");
 
-        System.out.println(card.getCardKind());
-        System.out.println(card.getCardNumber());
+        System.out.println(card.getCardKind());         // HEART
+        System.out.println(card.getCardNumber());       // 7
 
-        card.defaultMethod();
+        card.defaultMethod(); // Card 클래스에서 재정의 된 디폴트 메서드
 
 //        card.staticMethod(); - static 메서드는 해당 메서드에 포함된 인터페이스상에서만 호출 가능
-
-        PlayingCard.staticMethod();
+        PlayingCard.staticMethod(); // 정적 메서드입니다.
 
         // 인터페이스 필드(상수) 사용
-        System.out.println(PlayingCard.CLOVER);
-        System.out.println(PlayingCard.HEART);
-        System.out.println(PlayingCard.DIAMOND);
-        System.out.println(PlayingCard.SPADE);
+        System.out.println(PlayingCard.CLOVER);     // 1
+        System.out.println(PlayingCard.HEART);      // 2
+        System.out.println(PlayingCard.DIAMOND);    // 3
+        System.out.println(PlayingCard.SPADE);      // 4
     }
 }

@@ -37,23 +37,23 @@ public class D_Set {
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ추가ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 추가 add
-        students.add("정지지");
-        students.add("정은은");
-        students.add("최광광");
-        students.add("손태태");
+        students.add("빨강색");
+        students.add("샛노랑");
+        students.add("초록돌이");
+        students.add("파란물");
 
-        System.out.println(students); // [손태태, 정은은, 최광광, 정지지]
+        System.out.println(students); // [파란물, 샛노랑, 초록돌이, 빨강색]
 
-        students.add("정은은");
-        System.out.println(students); // [손태태, 정은은, 최광광, 정지지]
+        students.add("샛노랑");
+        System.out.println(students); // [파란물, 샛노랑, 초록돌이, 빨강색]
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ삭제ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 삭제 remove
-        boolean result = students.remove("최광광"); // 제거 후 완료 여부 반환
+        boolean result = students.remove("초록돌이"); // 제거 후 완료 여부 반환
         System.out.println(result); // true
-        System.out.println(students); // [손태태, 정은은, 정지지]
+        System.out.println(students); // [파란물, 샛노랑, 빨강색]
 
-        boolean falseResult = students.remove("이승승");
+        boolean falseResult = students.remove("보라숭이");
         System.out.println(falseResult); // false
 
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ크기ㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
@@ -63,9 +63,9 @@ public class D_Set {
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡ contains ㅡㅡㅡㅡㅡㅡㅡ");
         // 데이터 포함 여부 확인
         // 리스트.contains(요소값);
-        System.out.println(students.contains("손태태")); // true
-        System.out.println(students.contains("정지지")); // true
-        System.out.println(students.contains("조승승")); // false
+        System.out.println(students.contains("파란물")); // true
+        System.out.println(students.contains("빨강색")); // true
+        System.out.println(students.contains("핑크공주")); // false
 
 
         System.out.println(students.isEmpty()); // false

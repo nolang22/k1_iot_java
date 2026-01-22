@@ -10,7 +10,7 @@ package org.example.chapter13;
         : 생성자가 너무 많아질 떄
         : 코드가 복잡하고 읽기 어려울 떄
 
-    2. 장던점
+    2. 장단점
         1) 장점: 가독성 향상, 유연성 증가, 확장성 용이
         2) 단점: 구현 복잡성 증가, 작은객체 부적합
 
@@ -29,24 +29,6 @@ class Pizza {
     private final boolean cheese;
     private final boolean mushroom;
     private final boolean pepperoni;
-
-//    public Pizza(String menu, String size) {
-//        this.menu = menu;
-//        this.size = size;
-//
-//        this.cheese = false;
-//        this.mushroom = false;
-//        this.pepperoni = false;
-//    }
-//
-//    public Pizza(String menu, String size, boolean cheese, boolean mushroom, boolean pepperoni) {
-//        this.menu = menu;
-//        this.size = size;
-//        this.cheese = cheese;
-//        this.mushroom = mushroom;
-//        this.pepperoni = pepperoni;
-//    }
-
 
     // 1) Builder 클래스 정의 (Pizza 클래스 내부의 클래스)
     public static class Builder {
@@ -123,9 +105,9 @@ public class E_Builder {
                 .addPepperoni()
                 .build();
 
-        System.out.println(builderPizza);
-        System.out.println(optionalPizza1);
-        System.out.println(optionalPizza2);
+        System.out.println(builderPizza); // 피자 메뉴: 고구마 피자, 사이즈: M, 치즈: false, 버섯: false, 페페로니: false
+        System.out.println(optionalPizza1); // 피자 메뉴: 포테이토 피자, 사이즈: S, 치즈: true, 버섯: true, 페페로니: false
+        System.out.println(optionalPizza2); // 피자 메뉴: 쉬림프 피자, 사이즈: L, 치즈: false, 버섯: false, 페페로니: true
 
 
         // cf) 메서드 체이닝

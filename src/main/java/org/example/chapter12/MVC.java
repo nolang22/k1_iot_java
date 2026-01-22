@@ -106,17 +106,20 @@ public class MVC {
         LunchView view = new LunchView();
         LunchController controller = new LunchController(menu, view);
 
-        controller.studentRequestMenu();
+        controller.studentRequestMenu(); // [학생 요청] 오늘 급식 뭐에요?
+                                         // 오늘은 급식이 없습니다.
 
-        controller.setLunchMenu("깁밥, 떡뽂이, 콜라");
-//        controller.updateView(); // 오늘 급식 메뉴는: 깁밥, 떡뽂이, 콜라
-        controller.studentRequestMenu();
+        controller.setLunchMenu("김밥, 떡볶이, 콜라");
 
-        controller.setLunchMenu("깁밥, 매운 떡뽁이, 콜라, 치킨");
-//        controller.updateView(); // 오늘 급식 메뉴는: 깁밥, 매운 떡뽁이, 콜라
-        controller.studentRequestMenu();
+        controller.studentRequestMenu(); // [학생 요청] 오늘 급식 뭐에요?
+                                         // 오늘 급식 메뉴는: 김밥, 떡볶이, 콜라
 
+        controller.setLunchMenu("김밥, 매운 떡뽁이, 콜라, 치킨");
+
+        controller.studentRequestMenu(); // [학생 요청] 오늘 급식 뭐에요?
+                                         // 오늘 급식 메뉴는: 김밥, 매운 떡뽁이, 콜라, 치킨
         controller.setLunchMenu("");
-        controller.studentRequestMenu();
+        controller.studentRequestMenu(); // [학생 요청] 오늘 급식 뭐에요?
+                                         // 오늘은 급식이 없습니다.
     }
 }

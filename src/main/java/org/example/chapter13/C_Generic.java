@@ -87,12 +87,12 @@ public class C_Generic {
         double totalElectronics = DiscountPolicy.applyDiscount(electronics, 0.1);
         System.out.println("총 가전 할인액: " + totalElectronics + "원"); // 총 가전 할인액: 31.8원
 
-        List<Furniture> furnitures = new ArrayList<>();
-        furnitures.add(new Furniture("침대", 230));
-        furnitures.add(new Furniture("쇼파", 170));
-        furnitures.add(new Furniture("화장대", 50));
+        List<Furniture> furniture = new ArrayList<>();
+        furniture.add(new Furniture("침대", 230));
+        furniture.add(new Furniture("쇼파", 170));
+        furniture.add(new Furniture("화장대", 50));
 
-        double totalFurniture = DiscountPolicy.applyDiscount(furnitures, 0.2);
+        double totalFurniture = DiscountPolicy.applyDiscount(furniture, 0.2);
         System.out.println("총 가구 할인액: " + totalFurniture + "원"); // 총 가구 할인액: 90.0원
     }
 }
